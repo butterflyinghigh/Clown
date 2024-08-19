@@ -1,5 +1,5 @@
 const fs = require('fs');
-const botwatermark = "_ᴄʟᴏᴡɴ-ᴍᴅ ʙᴏᴛ_"
+const {botwatermark} = "_ᴄʟᴏᴡɴ-ᴍᴅ ʙᴏᴛ_"
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 const botwatermark = "_ᴄʟᴏᴡɴ-ᴍᴅ ʙᴏᴛ_"
 function convertToBool(text, fault = 'true') {
