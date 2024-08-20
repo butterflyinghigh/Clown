@@ -1,7 +1,7 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
 const {sleep} = require('../lib/functions')
-const { botwatermark } = require('./botwatermark')
+const { botwatermark } = require('../botwatermark')
 
 cmd({
     pattern: "restart",
