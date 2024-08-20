@@ -13,7 +13,7 @@ try{
 
 if(!q) return reply("Please give me a song name or url")
 const search = await yts(q)
-const data = search.video[0];
+const data = search.videos[0];
 const url = data.url
 
 let desc = `
