@@ -1,6 +1,6 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
-const { botwatermark } = require('./botwatermark')
+const { botwatermark } = require('../botwatermark')
 
 cmd({
     pattern: "alive",
