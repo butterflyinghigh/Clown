@@ -20,7 +20,7 @@ const { File } = require('megajs')
 const prefix = '.'
 const botwatermark = "_ᴄʟᴏᴡɴ-ᴍᴅ ʙᴏᴛ_"
 
-const ownerNumber = ['94742737742']
+const ownerNumber = ['94755845165']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
