@@ -39,6 +39,6 @@ await conn.sendMessage(from,{audio:{url:downloadUrl},mimetype:"audio/mpeg"},{quo
 
 }catch(e){
 console.log(e)
-reply('${e}')
+reply(`${e}`)
 }
 })
