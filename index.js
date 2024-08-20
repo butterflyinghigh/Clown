@@ -18,7 +18,7 @@ const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
 const prefix = '.'
-const botwatermark = "_ᴄʟᴏᴡɴ-ᴍᴅ ʙᴏᴛ_"
+const { botwatermark } = require('./botwatermark')
 
 const ownerNumber = ['94755845165']
 
