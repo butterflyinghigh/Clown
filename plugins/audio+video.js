@@ -1,6 +1,7 @@
 const {cmd , commands} = require('../command')
 const fg = require('api-dylux')
 const yts = require('yt-search')
+const { botwatermark } = require('./botwatermark')
 
 cmd({
     pattern: "song",
@@ -17,13 +18,16 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-Clown-MD Song Downloader
+> *🤡 CLOWN-MD SONG DOWNLOADER 🤡*
 
-Title: ${data.title}
-Description: ${data.description}
-Time: ${data.timestamp}
-Ago: ${data.ago}
-Views: ${data.views}
+> *TITLE:* ${data.title}
+> *DURATION :* ${data.timestamp}
+> *AGO:* ${data.ago}
+> *VIEWS:* ${data.views}
+> *DESCRIPTION:* ${data.description}
+
+
+${botwatermark}
 `
 
 await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
