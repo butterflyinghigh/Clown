@@ -1,7 +1,7 @@
 const {cmd , commands} = require('../command')
 const fg = require('api-dylux')
 const yts = require('yt-search')
-const { botwatermark } = require('./botwatermark')
+const { botwatermark } = require('../botwatermark')
 
 cmd({
     pattern: "song",
