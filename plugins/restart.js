@@ -1,6 +1,7 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
 const {sleep} = require('../lib/functions')
+const { botwatermark } = require('../botwatermark')
 
 cmd({
     pattern: "restart",
@@ -12,7 +13,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 if(!isOwner) return
 const {exec} = require("child_process")
-reply("🔄 Clown-MD Bot Restarting...")
+reply("🔄 Clown-MD Bot Restarting...\n\n\n" + botwatermark)
 await sleep(1500)
 exec("pm2 restart all")
 }catch(e){
