@@ -19,8 +19,7 @@ let status = `
 *Ram:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 *Platform:* ${os.hostname()}
 *Owner:* Mr.Unknown
-*Bot Name:* Clown-MD
-`
+*Bot Name:* Clown-MD\n\n\n${botwatermark}`
 
 await conn.sendMessage(from,{image:{url:`https://telegra.ph/file/70222cf39588987d83f51.png`},caption:status},{quoted:mek});
 
