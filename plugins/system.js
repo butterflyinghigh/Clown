@@ -19,10 +19,11 @@ let status = `
 *Ram:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 *Platform:* ${os.hostname()}
 *Owner:* Mr.Unknown
-*Bot Name:* Clown-MD\n\n\n${botwatermark}`
+*Bot Name:* Clown-MD
+`
 
-await conn.sendMessage(from,{image: {url: ``},caption: status},{qouted:mek})
-    
+await conn.sendMessage(from,{image:{url:`https://github.com/Mr-Unknown-SL/Clown-MD.git`},caption:status},{quoted:mek});
+
 }catch(e){
 console.log(e)
 reply(`${e}`)
