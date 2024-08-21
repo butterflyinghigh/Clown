@@ -23,7 +23,7 @@ let status = `
 
 return await conn.sendMessages(from,{image: {url: ``},caption: status},{qouted:mek})
     
-}catch(e)
+}catch(e){
 console.log(e)
 reply(`${e}`)
 }
