@@ -6,7 +6,7 @@ const { botwatermark } = require('../botwatermark')
 
 cmd({
     pattern: "system",
-    alias: [status],
+    alias: ["status"],
     desc: "Check system informations",
     category: "main",
     filename: __filename
