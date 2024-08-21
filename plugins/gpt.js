@@ -18,4 +18,5 @@ return reply(`${data.data} + botwatermark`)
 }catch(e){
 console.log(e)
 reply(`${e}`)
+}
 })
