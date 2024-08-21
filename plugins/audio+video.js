@@ -24,8 +24,7 @@ let desc = `
 > *DURATION :* ${data.timestamp}
 > *AGO:* ${data.ago}
 > *VIEWS:* ${data.views}
-> *DESCRIPTION:* ${data.description}\n\n\n
-` + botwatermark
+> *DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
 
 await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 
