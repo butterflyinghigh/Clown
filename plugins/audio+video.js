@@ -20,11 +20,11 @@ const url = data.url
 let desc = `
 > *🤡 CLOWN-MD SONG DOWNLOADER 🤡*
 
-> *TITLE:* ${data.title}
-> *DURATION :* ${data.timestamp}
-> *AGO:* ${data.ago}
-> *VIEWS:* ${data.views}
-> *DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
+*📝 TITLE:* ${data.title}
+*⏰ DURATION :* ${data.timestamp}
+*📆 AGO:* ${data.ago}
+*📊 VIEWS:* ${data.views}
+*🗓️ DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
 
 await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 
@@ -61,11 +61,11 @@ const url = data.url
 let desc = `
 > *🤡 CLOWN-MD VIDEO DOWNLOADER 🤡*
 
-> *TITLE:* ${data.title}
-> *DURATION :* ${data.timestamp}
-> *AGO:* ${data.ago}
-> *VIEWS:* ${data.views}
-> *DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
+*📝 TITLE:* ${data.title}
+*⏰ DURATION :* ${data.timestamp}
+*📆 AGO:* ${data.ago}
+*📊 VIEWS:* ${data.views}
+*🗓️ DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
 
 await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 
