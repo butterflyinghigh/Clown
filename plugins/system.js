@@ -21,7 +21,7 @@ let status = `
 *Owner:* Mr.Unknown
 *Bot Name:* Clown-MD\n\n\n${botwatermark}`
 
-await conn.sendMessages(from,{image: {url: ``},caption: status},{qouted:mek})
+await conn.sendMessage(from,{image: {url: ``},caption: status},{qouted:mek})
     
 }catch(e){
 console.log(e)
