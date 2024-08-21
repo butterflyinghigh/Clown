@@ -22,7 +22,7 @@ let status = `
 *Bot Name:* Clown-MD
 `
 
-await conn.sendMessage(from,{image:{url:`https://github.com/Mr-Unknown-SL/Clown-MD.git`},caption:status},{quoted:mek});
+await conn.sendMessage(from,{image:{url:`https://telegra.ph/file/70222cf39588987d83f51.png`},caption:status},{quoted:mek});
 
 }catch(e){
 console.log(e)
