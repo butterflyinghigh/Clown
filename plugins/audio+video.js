@@ -18,7 +18,7 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-> *🤡 CLOWN-MD SONG DOWNLOADER 🤡*
+> *🤡 𝙲𝙻𝙾𝚆𝙽-𝙼𝙳 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🤡*
 
 *📝 TITLE:* ${data.title}
 *⏰ DURATION :* ${data.timestamp}
@@ -59,7 +59,7 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-> *🤡 CLOWN-MD VIDEO DOWNLOADER 🤡*
+> *🤡 𝙲𝙻𝙾𝚆𝙽-𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🤡*
 
 *📝 TITLE:* ${data.title}
 *⏰ DURATION :* ${data.timestamp}
