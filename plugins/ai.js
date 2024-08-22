@@ -13,7 +13,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-  m.react("🤖")
+await m.react("🤖")
 data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}`)
     return reply(`${data.data}\n\n\n` + botwatermark)
 }catch(e){
