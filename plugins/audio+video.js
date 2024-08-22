@@ -12,8 +12,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-if(!q) reply("Please give me a song name or url")
-    return m.react("❎")
+if(!q) return reply("Please give me a song name or url")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
