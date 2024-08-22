@@ -14,8 +14,8 @@ try{
 if(!isOwner) return
     m.react("🔁")
 const {exec} = require("child_process")
-reply("🔄 Clown-MD Bot Restarting...\n\n\n" + botwatermark)
     m.react("✅")
+reply("🔄 Clown-MD Bot Restarting...\n\n\n" + botwatermark)
 await sleep(1500)
 exec("pm2 restart all")
 }catch(e){
