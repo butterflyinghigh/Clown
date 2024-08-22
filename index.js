@@ -17,8 +17,8 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-const { PREFIX } = require('./config')
-const prefix = 'PREFIX'
+const OPREFIX = require('./config')
+const prefix = 'OPREFIX'
 const { botwatermark } = require('./botwatermark')
 
 const ownerNumber = [config.OWNER_NUMBER]
