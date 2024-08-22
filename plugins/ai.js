@@ -5,7 +5,7 @@ const { botwatermark } = require('../botwatermark')
 
 cmd({
     pattern: "gpt",
-    alias: ["ai,chatgpt"]
+    alias: ["ai,chatgpt"],
     desc: "Chat with ai",
     category: "main",
     filename: __filename
