@@ -1,5 +1,6 @@
 const config = require('../config')
 const {cmd , commands} = require('../command')
+const prefix = require('./index')
 const { botwatermark } = require('../botwatermark')
 
 cmd({
