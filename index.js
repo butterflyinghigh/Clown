@@ -138,7 +138,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
 
 //========================Owner React===========================================
 
-if(senderNumber.includes(config.OWNER_NUMBER)){
+if(senderNumber.includes(config.OWNER_NUMBER) && config.O_REACT == "true"){
 if(isReact) return
 m.react(config.OWNER_REACT)
 }
