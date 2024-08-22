@@ -23,25 +23,25 @@ try{
 
 for (let i = 0; i < commands.length; i++) {
 if (commands[i].pattern && !commands[i].dontAddCommandList) {
-menu[commands[i].category] += `.${commands[i].pattern}\n`;
+menu[commands[i].category] += `${prefix}${commands[i].pattern}\n`;
  }
 }
 
-  let madeMenu = `
-  > *Download Commands 📥*
-  ${menu.download}
+let madeMenu = `
+> *Download Commands 📥*
+${menu.download}
 
-  > *Owner Commands 👤*
-  ${menu.owner}
+> *Owner Commands 👤*
+${menu.owner}
 
-  > *Main Commands 🎯*
-  ${menu.main}
+> *Main Commands 🎯*
+${menu.main}
 
-  > *Group Commands 👥*
-  ${menu.group}
+> *Group Commands 👥*
+${menu.group}
 
-  > *Search Commands 🔎*
-  ${menu.search}\n\n\n${botwatermark}`
+> *Search Commands 🔎*
+${menu.search}\n\n\n${botwatermark}`
 
   await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjU4MzRf/menu-restaurant-hand-drawn-lettering-phrase-text-vector-illustration-inscription-on-white-background-calligraphy-for-the-design-of-posters-card.jpg`},caption: madeMenu},{quoted:mek})
 
