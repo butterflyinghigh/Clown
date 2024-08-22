@@ -26,8 +26,8 @@ let desc = `
 *📊 VIEWS:* ${data.views}
 *🗓️ DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
 
-await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 m.react("📥")
+await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 
 //===Download Audio===
 
