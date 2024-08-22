@@ -26,11 +26,11 @@ let desc = `
 *📊 VIEWS:* ${data.views}
 *🗓️ DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
 
-m.react("📥")
 await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 
 //===Download Audio===
 
+m.react("📥")
 let down = await fg.yta(url)
 let downloadUrl = down.dl_url
 
@@ -73,14 +73,17 @@ await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:me
 
 //===Download Video===
 
+m.react("📥")
 let down = await fg.ytv(url)
 let downloadUrl = down.dl_url
 
 //===Send Video===
 
+m.react("📤")
 await conn.sendMessage(from,{video:{url:downloadUrl},mimetype:"video/mp4",caption:botwatermark},{quoted:mek})
 await conn.sendMessage(from,{document:{url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:botwatermark},{quoted:mek})
-
+m.react("✅")
+    
 }catch(e){
 console.log(e)
 reply(`${e}`)
