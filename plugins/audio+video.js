@@ -12,7 +12,8 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-if(!q) return reply("Please give me a song name or url")
+if(!q) reply("Please give me a song name or url")
+    return m.react("❎")
 const search = await yts(q)
 const data = search.videos[0];
 const url = data.url
@@ -30,11 +31,13 @@ await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:me
 
 //===Download Audio===
 
+m.react("📥")
 let down = await fg.yta(url)
 let downloadUrl = down.dl_url
 
 //===Send Audio===
 
+m.react("📤")
 await conn.sendMessage(from,{audio:{url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
 await conn.sendMessage(from,{document:{url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:botwatermark},{quoted:mek})
 
