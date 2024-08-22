@@ -11,4 +11,6 @@ ALIVE_MSG: process.env.ALIVE_MSG || "╾╾╾╾╾╾╾╾╾╾╾╾╾╾�
 ALIVE_AUDIO: process.env.ALIVE_AUDIO || "https://od.lk/d/NTdfOTMxMzEyOTlf/Hi.%20i%20am%20clown%20md%20whatsapp%20user%20bot%20created%20by%20mr%20unknown.mp3",
 AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",
 MODE: process.env.MODE || "private", // public,private,inbox,groups
+OWNER_NUMBER: process.env.OWNER_NUMBER || "94755845165",
+OWNER_REACT: process.env.OWNER_REACT || "😊",
 };
