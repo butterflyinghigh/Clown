@@ -11,7 +11,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
        await conn.sendMessage(from,{audio:{url: config.ALIVE_AUDIO},mimetype:"audio/mpeg",ptt:true},{quoted: mek})
-return await conn.sendMessage(from,{image: {url: config.ALIVE_IMG},caption: config.ALIVE_MSG + botwatermark,m.react:"🤡"})
+return await conn.sendMessage(from,{image: {url: config.ALIVE_IMG},caption: config.ALIVE_MSG + botwatermark,react:"🤡"})
 }catch(e){
 console.log(e)
 reply(`${e}`)
