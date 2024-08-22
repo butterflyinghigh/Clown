@@ -71,7 +71,7 @@ require("./plugins/" + plugin);
 console.log('✅ Clown-MD Plugins Installed')
 console.log('✅ Clown-MD Bot Connected')
 
-let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${prefix}\n*OWNER NUMBER:* ${ownerNumber}\n*WORK TYPE:* ${config.MODE}\n*ALIVE IMG:* ${config.ALIVE_IMG}\n*ALIVE AUDIO:* ${ALIVE_AUDIO}\n*AUTO READ STATUS:* ${AUTO_READ_STATUS}\n*WORK TYPE:* ${MODE}\n*O REACT:* ${O_REACT}\n*OWNER REACT:* ${OWNER_REACT}\n\n\n` + botwatermark;
+let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${prefix}\n*OWNER NUMBER:* ${ownerNumber}\n*WORK TYPE:* ${config.MODE}\n*ALIVE IMG:* ${config.ALIVE_IMG}\n*ALIVE AUDIO:* ${config.ALIVE_AUDIO}\n*AUTO READ STATUS:* ${config.AUTO_READ_STATUS}\n*WORK TYPE:* ${config.MODE}\n*O REACT:* ${config.O_REACT}\n*OWNER REACT:* ${config.OWNER_REACT}\n\n\n` + botwatermark;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/70222cf39588987d83f51.png` }, caption: up })
 
