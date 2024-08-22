@@ -14,6 +14,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
+m.react("🔁")
 let status = `
 *Uptime:*  ${runtime(process.uptime())}
 *Ram:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
@@ -22,7 +23,7 @@ let status = `
 *Bot Name:* Clown-MD\n\n\n${botwatermark}`
 
 await conn.sendMessage(from,{image:{url:`https://telegra.ph/file/70222cf39588987d83f51.png`},caption:status},{quoted:mek});
-
+m.react("✅")
 }catch(e){
 console.log(e)
 reply(`${e}`)
