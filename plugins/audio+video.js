@@ -31,8 +31,8 @@ await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:me
 //===Download Audio===
 
 let down = await fg.yta(url)
+        m.react("📥")
 let downloadUrl = down.dl_url
-    m.react("📥")
 
 //===Send Audio===
 
