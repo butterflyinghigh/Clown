@@ -15,8 +15,7 @@ try{
 
   m.react("🤖")
 data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}`)
-    reply(`${data.data}\n\n\n` + botwatermark)
-    return reply.react("✅")
+    return reply(`${data.data}\n\n\n` + botwatermark)
 }catch(e){
 console.log(e)
 reply(`${e}`)
