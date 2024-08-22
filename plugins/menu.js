@@ -45,7 +45,7 @@ ${menu.group}
 > *Search Commands 🔎*
 ${menu.search}\n\n\n${botwatermark}`
 
-m.react("📃")
+await m.react("📃")
 await conn.sendMessage(from,{audio: {url: `https://od.lk/d/NTdfOTMyMjU4NDlf/here%20is%20the%20clown%20md%20bot%20command%20list.wav`},mimetype:"audio/mpeg",ptt:true},{quoted:mek})
 await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjU4MzRf/menu-restaurant-hand-drawn-lettering-phrase-text-vector-illustration-inscription-on-white-background-calligraphy-for-the-design-of-posters-card.jpg`},caption: madeMenu},{quoted:mek})
 
