@@ -1,2 +1,3 @@
 # Clown-MD
-🤖 Whatsapp Bot [Owner: Mr.Unknown 🇱🇰]
+🤖 Whatsapp Bot
+👤 Created by Mr.Unknown
