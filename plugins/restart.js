@@ -12,8 +12,10 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 if(!isOwner) return
+    m.react("🔁")
 const {exec} = require("child_process")
 reply("🔄 Clown-MD Bot Restarting...\n\n\n" + botwatermark)
+    m.react("✅")
 await sleep(1500)
 exec("pm2 restart all")
 }catch(e){
