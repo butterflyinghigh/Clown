@@ -19,6 +19,7 @@ const axios = require('axios')
 const { File } = require('megajs')
 const prefix = '.'
 const { botwatermark } = require('./botwatermark')
+const { ALIVE_IMG } = require('./config')
 
 const ownerNumber = [config.OWNER_NUMBER]
 
@@ -70,7 +71,7 @@ require("./plugins/" + plugin);
 console.log('✅ Clown-MD Plugins Installed')
 console.log('✅ Clown-MD Bot Connected')
 
-let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${prefix}\n*OWNER NUMBER:* ${ownerNumber}\n*WORK TYPE:* config.MODE\n\n\n` + botwatermark;
+let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${prefix}\n*OWNER NUMBER:* ${ownerNumber}\n*WORK TYPE:* ${ALIVE_IMG}\n\n\n` + botwatermark;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/70222cf39588987d83f51.png` }, caption: up })
 
