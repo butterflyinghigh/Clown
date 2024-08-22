@@ -17,9 +17,8 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-const prefix = '.'
+const prefix = 'config.PREFIX'
 const { botwatermark } = require('./botwatermark')
-const { CONNECT_MSG } = require('./config')
 
 const ownerNumber = [config.OWNER_NUMBER]
 
@@ -71,7 +70,7 @@ require("./plugins/" + plugin);
 console.log('✅ Clown-MD Plugins Installed')
 console.log('✅ Clown-MD Bot Connected')
 
-let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${prefix}\n*OWNER NUMBER:* ${ownerNumber}\n*WORK TYPE:* ${config.MODE}\n*ALIVE IMG:* ${config.ALIVE_IMG}\n*ALIVE AUDIO:* ${config.ALIVE_AUDIO}\n*AUTO READ STATUS:* ${config.AUTO_READ_STATUS}\n*WORK TYPE:* ${config.MODE}\n*O REACT:* ${config.O_REACT}\n*OWNER REACT:* ${config.OWNER_REACT}\n\n\n` + botwatermark;
+let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${config.PREFIX}\n*OWNER NUMBER:* ${config.OWNER_NUMBER}\n*WORK TYPE:* ${config.MODE}\n*ALIVE IMG:* ${config.ALIVE_IMG}\n*ALIVE AUDIO:* ${config.ALIVE_AUDIO}\n*AUTO READ STATUS:* ${config.AUTO_READ_STATUS}\n*WORK TYPE:* ${config.MODE}\n*O REACT:* ${config.O_REACT}\n*OWNER REACT:* ${config.OWNER_REACT}\n\n\n` + botwatermark;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/70222cf39588987d83f51.png` }, caption: up })
 
