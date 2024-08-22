@@ -12,6 +12,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
+    m.react("📃")
   let menu = {
     main: '',
     download: '',
@@ -27,7 +28,9 @@ menu[commands[i].category] += `${prefix}${commands[i].pattern}\n`;
  }
 }
 
-let madeMenu = `
+let madeMenu = `*Hello ${pushname} 👋*
+*Here is the Clown-MD command list 👇*
+
 > *Download Commands 📥*
 ${menu.download}
 
