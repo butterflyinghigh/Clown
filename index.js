@@ -20,7 +20,7 @@ const { File } = require('megajs')
 const prefix = '.'
 const { botwatermark } = require('./botwatermark')
 
-const ownerNumber = ['94755845165']
+const ownerNumber = [config.OWNER_NUMBER]
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -136,9 +136,9 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
               }
             }
 
-if(senderNumber.includes("94755845165")){
+if(senderNumber.includes(config.OWNER_NUMBER)){
 if(isReact) return
-m.react("❤️")
+m.react(config.OWNER_REACT)
 }
         
 //========================Work Type===========================================
