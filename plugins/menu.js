@@ -44,7 +44,7 @@ menu[commands[i].category] += `${prefix}${commands[i].pattern}\n`;
 
   await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjU4MzRf/menu-restaurant-hand-drawn-lettering-phrase-text-vector-illustration-inscription-on-white-background-calligraphy-for-the-design-of-posters-card.jpg`},caption: madeMenu},{quoted:mek})
 
-}catch(e)
+}catch(e){
 console.log(e)
 reply(`${e}`)
 }
