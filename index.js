@@ -192,3 +192,4 @@ setTimeout(() => {
 connectToWA()
 }, 4000);  
 
+module.exports = { prefix }
