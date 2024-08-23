@@ -2,6 +2,7 @@ const config = require('../config')
 const {cmd , commands} = require('../command')
 const { prefix } = require('../index')
 const { botwatermark } = require('../botwatermark')
+const { readmoretext } = require('..readmoretext')
 
 cmd({
     pattern: "menu",
@@ -34,6 +35,8 @@ let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗠𝗘𝗡𝗨 🤡 
 *╭─📥 Dᴏᴡɴʟᴏᴀᴅ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
 *╎*${menu.download}
 *╰────────────────────◦•◦❥•*
+
+${readmoretext}
 
 *╭─👤 Oᴡɴᴇʀ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
 *╎*${menu.owner}
