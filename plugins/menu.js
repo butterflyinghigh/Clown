@@ -2,7 +2,7 @@ const config = require('../config')
 const {cmd , commands} = require('../command')
 const { prefix } = require('../index')
 const { botwatermark } = require('../botwatermark')
-const { readmoretext } = require('..readmoretext')
+const { readmoretext } = require('../readmoretext')
 
 cmd({
     pattern: "menu",
