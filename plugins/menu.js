@@ -46,8 +46,8 @@ ${menu.group}
 ${menu.search}\n\n\n${botwatermark}`
 
 await m.react("📃")
-await conn.sendMessage(from,{audio: {url: `https://od.lk/d/NTdfOTMyMjU4NDlf/here%20is%20the%20clown%20md%20bot%20command%20list.wav`},mimetype:"audio/mpeg",ptt:true},{quoted:mek})
-await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjU4MzRf/menu-restaurant-hand-drawn-lettering-phrase-text-vector-illustration-inscription-on-white-background-calligraphy-for-the-design-of-posters-card.jpg`},caption: madeMenu},{quoted:mek})
+await conn.sendMessage(from,{audio: {url: `https://od.lk/d/NTdfOTMyMjc0ODBf/1724385520923cm07iq5w-voicemaker.in-speech.mp3`},mimetype:"audio/mpeg",ptt:true},{quoted:mek})
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
 
 }catch(e){
 console.log(e)
