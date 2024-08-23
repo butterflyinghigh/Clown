@@ -20,13 +20,17 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-> *🤡 𝙲𝙻𝙾𝚆𝙽-𝙼𝙳 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🤡*
+*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗦𝗢𝗡𝗚 𝗗𝗟 🤡 」*
 
-*📝 TITLE:* ${data.title}
-*⏰ DURATION :* ${data.timestamp}
-*📆 AGO:* ${data.ago}
-*📊 VIEWS:* ${data.views}
-*🗓️ DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
+*╭──🎶 Song Details 🎶──◦•◦❥•*
+*╎*
+*╎* *📝 Tɪᴛʟᴇ :* ${data.title}
+*╎* *⏰ Dᴜʀᴀᴛɪᴏɴ :* ${data.timestamp}
+*╎* *📆 Aɢᴏ :* ${data.ago}
+*╎* *📊 Vɪᴇᴡꜱ :* ${data.views}
+*╎* *🗓️ Dᴇꜱᴄʀɪᴘᴛɪᴏɴ :* ${data.description}
+*╎*
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
 
 await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 
@@ -65,13 +69,17 @@ const data = search.videos[0];
 const url = data.url
 
 let desc = `
-> *🤡 𝙲𝙻𝙾𝚆𝙽-𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🤡*
+*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗩𝗜𝗗𝗘𝗢 𝗗𝗟 🤡 」*
 
-*📝 TITLE:* ${data.title}
-*⏰ DURATION :* ${data.timestamp}
-*📆 AGO:* ${data.ago}
-*📊 VIEWS:* ${data.views}
-*🗓️ DESCRIPTION:* ${data.description}\n\n\n${botwatermark}`
+*╭──🎶 Song Details 🎶──◦•◦❥•*
+*╎*
+*╎* *📝 Tɪᴛʟᴇ :* ${data.title}
+*╎* *⏰ Dᴜʀᴀᴛɪᴏɴ :* ${data.timestamp}
+*╎* *📆 Aɢᴏ :* ${data.ago}
+*╎* *📊 Vɪᴇᴡꜱ :* ${data.views}
+*╎* *🗓️ Dᴇꜱᴄʀɪᴘᴛɪᴏɴ :* ${data.description}
+*╎*
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
 
 await conn.sendMessage(from,{image:{url:data.thumbnail},caption:desc},{quoted:mek});
 
