@@ -22,7 +22,7 @@ let status = `
 *Owner:* Mr.Unknown
 *Bot Name:* Clown-MD\n\n\n${botwatermark}`
 
-await conn.sendMessage(from,{image:{url:`https://telegra.ph/file/70222cf39588987d83f51.png`},caption:status},{quoted:mek});
+await conn.sendMessage(from,{image:{url:`https://od.lk/d/NTdfOTMyMjc0ODlf/20240823_101729.jpg`},caption:status},{quoted:mek});
 await m.react("✅")
 }catch(e){
 console.log(e)
