@@ -71,7 +71,7 @@ let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗠𝗘𝗡𝗨 🤡 
 *╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
 
 await m.react("📋")
-await conn.sendMessage(from,{audio: {url: `https://od.lk/d/NTdfOTMyMjc0ODBf/1724385520923cm07iq5w-voicemaker.in-speech.mp3`},mimetype:"audio/mpeg",ptt:true},{quoted:mek})
+await conn.sendMessage(from,{audio: {url: `https://od.lk/d/NTdfOTMyMjg0OTVf/1724426628423rgwzdzcho-voicemaker.in-speech.mp3`},mimetype:"audio/mpeg",ptt:true},{quoted:mek})
 await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
 
 }catch(e){
