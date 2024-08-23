@@ -23,14 +23,14 @@ try{
 
 for (let i = 0; i < commands.length; i++) {
 if (commands[i].pattern && !commands[i].dontAddCommandList) {
-menu[commands[i].category] += `*╎ ● ${prefix}${commands[i].pattern}*\n`;
+menu[commands[i].category] += ` *● ${prefix}${commands[i].pattern}*\n*╎*`;
  }
 }
 
 let madeMenu = `*「  𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗠𝗘𝗡𝗨  」*
 
 *╭─📥 Dᴏᴡɴʟᴏᴀᴅ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-${menu.download}
+*╎* ${menu.download}
 *╰────────────────────◦•◦❥•*
 
 *╭─👤 Oᴡɴᴇʀ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
