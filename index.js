@@ -78,7 +78,7 @@ require("./plugins/" + plugin);
 console.log('✅ Clown-MD Plugins Installed')
 console.log('✅ Clown-MD Bot Connected')
 
-let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${prefix}\n*MODE:* ${config.MODE}\n\n\n` + botwatermark;
+let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${config.PREFIX}\n*OWNER_NUMBER:* ${config.OWNER_NUMBER}\n*MODE:* ${config.MODE}\n*O_REACT:* ${config.O_REACT}\n*OWNER_REACT:* ${config.OWNER_REACT}\n*AUTO_READ_STATUS:* ${config.AUTO_READ_STATUS}\n*ALIVE_AUDIO:* ${config.ALIVE_AUDIO}\n*ALIVE_IMG:* ${config.ALIVE_IMG}\n*ALIVE_MSG:* ${config.ALIVE_MSG}\n\n\n` + botwatermark;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://od.lk/d/NTdfOTMyMjc0ODVf/20240823_095407.png` }, caption: up })
 
