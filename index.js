@@ -202,6 +202,4 @@ res.send("✅ Clown-MD Bot Started");
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);  
-
-module.exports = { prefix }
+}, 4000);
