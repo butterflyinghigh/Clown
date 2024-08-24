@@ -37,20 +37,17 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 //=============================================
+
+async function connectToWA() {
 //==============Connect Mongodb============
-
 const connectDB = require('./lib/mongodb')
-connectDB();
-        
+connectDB();  
 //===========================================
-
 const {readEnv} = require('./lib/database')
 const config = await readEnv();
 const prefix = config.PREFIX
-
 //===========================================
 
-async function connectToWA() {
 console.log("🔄 Clown-MD Bot Connecting...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
