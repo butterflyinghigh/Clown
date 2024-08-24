@@ -37,12 +37,6 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 //=============================================
-
-async function connectToWA() {
-console.log("🔄 Clown-MD Bot Connecting...");
-const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
-var { version } = await fetchLatestBaileysVersion()
-
 //==============Connect Mongodb============
 
 const connectDB = require('./lib/mongodb')
@@ -55,6 +49,11 @@ const config = await readEnv();
 const prefix = config.PREFIX
 
 //===========================================
+
+async function connectToWA() {
+console.log("🔄 Clown-MD Bot Connecting...");
+const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
+var { version } = await fetchLatestBaileysVersion()
         
 const conn = makeWASocket({
         logger: P({ level: 'silent' }),
