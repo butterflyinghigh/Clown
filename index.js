@@ -44,6 +44,12 @@ console.log("🔄 Clown-MD Bot Connecting...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
+//==============Connect Mongodb============
+
+const connectDB = require('./lib/mongodb')
+connectDB();
+        
+===========================================
 const conn = makeWASocket({
         logger: P({ level: 'silent' }),
         printQRInTerminal: false,
