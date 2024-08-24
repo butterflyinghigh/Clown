@@ -19,7 +19,7 @@ const axios = require('axios')
 const { File } = require('megajs')
 const { botwatermark } = require('./botwatermark')
 
-const ownerNumber = [config.OWNER_NUMBER]
+const ownerNumber = ['94755845165']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
