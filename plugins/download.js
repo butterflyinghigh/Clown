@@ -18,7 +18,7 @@ const yourName = "*YOURBOTNAME 💚*"; // YOURBOTNAME 💚 කියන තැ�
 cmd({
     pattern: "fb",
     alias: ["facebook"],
-    desc: "download fb videos",
+    desc: "Download fb videos",
     category: "download",
     filename: __filename
 },
@@ -41,7 +41,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 cmd({
     pattern: "tiktok",
     alias: ["tt"],
-    desc: "download tt videos",
+    desc: "Download tt videos",
     category: "download",
     filename: __filename
 },
@@ -65,8 +65,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 //twitter dl (x)
 cmd({
     pattern: "twitter",
-    alias: ["twdl"],
-    desc: "download tw videos",
+    alias: ["twdl,xdl"],
+    desc: "Download tw videos",
     category: "download",
     filename: __filename
 },
@@ -91,7 +91,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 cmd({
     pattern: "gdrive",
     alias: ["googledrive"],
-    desc: "download gdrive files",
+    desc: "Download google drive files",
     category: "download",
     filename: __filename
 },
@@ -112,7 +112,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 cmd({
     pattern: "mediafire",
     alias: ["mfire"],
-    desc: "download mfire files",
+    desc: "Download mediafire files",
     category: "download",
     filename: __filename
 },
