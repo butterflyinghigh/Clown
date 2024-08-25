@@ -17,9 +17,10 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
+const prefix = '.'
 const { botwatermark } = require('./botwatermark')
 
-const ownerNumber = config.OWNER_NUMBER
+const ownerNumber = [config.OWNER_NUMBER]
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -39,19 +40,10 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-//==============Connect Mongodb============
-const connectDB = require('./lib/mongodb')
-connectDB();  
-//===========================================
-const {readEnv} = require('./lib/database')
-const config = await readEnv();
-const prefix = config.PREFIX
-//===========================================
-
 console.log("🔄 Clown-MD Bot Connecting...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
-        
+
 const conn = makeWASocket({
         logger: P({ level: 'silent' }),
         printQRInTerminal: false,
@@ -78,9 +70,9 @@ require("./plugins/" + plugin);
 console.log('✅ Clown-MD Plugins Installed')
 console.log('✅ Clown-MD Bot Connected')
 
-let up = `> *🤡 Cʟᴏᴡɴ-MD Wʜᴀᴛꜱᴀᴘᴘ Bᴏᴛ Cᴏɴɴᴇᴄᴛᴇᴅ ✅*\n\n*PREFIX:* ${config.PREFIX}\n*OWNER_NUMBER:* ${config.OWNER_NUMBER}\n*MODE:* ${config.MODE}\n*O_REACT:* ${config.O_REACT}\n*OWNER_REACT:* ${config.OWNER_REACT}\n*AUTO_READ_STATUS:* ${config.AUTO_READ_STATUS}\n*ALIVE_AUDIO:* ${config.ALIVE_AUDIO}\n*ALIVE_IMG:* ${config.ALIVE_IMG}\n*ALIVE_MSG:* ${config.ALIVE_MSG}\n\n\n` + botwatermark;
+let up = `> *🤖 Clown-MD Whatsapp Bot Connected ✅*\n\n*PREFIX:* ${prefix}\n*OWNER NUMBER:* ${config.OWNER_NUMBER}\n*WORK TYPE:* ${config.MODE}\n*AUTO READ STATUS:* ${config.AUTO_READ_STATUS}\n*WORK TYPE:* ${config.MODE}\n*O REACT:* ${config.O_REACT}\n*OWNER REACT:* ${config.OWNER_REACT}\n*ALIVE IMG:* ${config.ALIVE_IMG}\n*ALIVE AUDIO:* ${config.ALIVE_AUDIO}\n*ALIVE MSG:* ${config.ALIVE_MSG}\n\n\n` + botwatermark;
 
-conn.sendMessage(config.OWNER_NUMBER + "@s.whatsapp.net", { image: { url: `https://od.lk/d/NTdfOTMyMjc0ODVf/20240823_095407.png` }, caption: up })
+conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://od.lk/d/NTdfOTMyMjc0ODVf/20240823_095407.png` }, caption: up })
 
 }
 })
@@ -109,7 +101,7 @@ const senderNumber = sender.split('@')[0]
 const botNumber = conn.user.id.split(':')[0]
 const pushname = mek.pushName || 'Sin Nombre'
 const isMe = botNumber.includes(senderNumber)
-const isOwner = config.OWNER_NUMBER.includes(senderNumber) || isMe
+const isOwner = ownerNumber.includes(senderNumber) || isMe
 const botNumber2 = await jidNormalizedUser(conn.user.id);
 const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(e => {}) : ''
 const groupName = isGroup ? groupMetadata.subject : ''
@@ -198,4 +190,6 @@ res.send("✅ Clown-MD Bot Started");
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);
+}, 4000);  
+
+module.exports = { prefix }
