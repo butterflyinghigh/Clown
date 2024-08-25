@@ -27,6 +27,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         let data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`)
         reply("*Downloading...*")
         //send video (hd,sd)
+        if(reply.mek == "1")
         await conn.sendMessage(from, { video: { url: data.data.hd }, mimetype: "video/mp4", caption: `- HD\n\n ${botwatermark}` }, { quoted: mek })
         await conn.sendMessage(from, { video: { url: data.data.sd }, mimetype: "video/mp4", caption: `- SD \n\n ${botwatermark}` }, { quoted: mek })  
     } catch (e) {
