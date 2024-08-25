@@ -43,7 +43,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "downmenu",
-    desc: "Get bot command pannel.",
+    desc: "Get download command list.",
     category: "mainmenu",
     filename: __filename
 },
@@ -79,7 +79,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "ownermenu",
-    desc: "Get bot command pannel.",
+    desc: "Get owner command list.",
     category: "mainmenu",
     filename: __filename
 },
@@ -115,7 +115,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "mainmenu",
-    desc: "Get bot command pannel.",
+    desc: "Get main command list.",
     category: "mainmenu",
     filename: __filename
 },
@@ -151,7 +151,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "aimenu",
-    desc: "Get bot command pannel.",
+    desc: "Get ai command list.",
     category: "mainmenu",
     filename: __filename
 },
@@ -187,7 +187,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "groupmenu",
-    desc: "Get bot command pannel.",
+    desc: "Get group command list.",
     category: "mainmenu",
     filename: __filename
 },
@@ -223,7 +223,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "searchmenu",
-    desc: "Get bot command pannel.",
+    desc: "Get search command list.",
     category: "mainmenu",
     filename: __filename
 },
@@ -259,7 +259,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "convertmenu",
-    desc: "Get bot command pannel.",
+    desc: "Get convert command list.",
     category: "mainmenu",
     filename: __filename
 },
@@ -295,7 +295,7 @@ reply(`${e}`)
 
 cmd({
     pattern: "prankmenu",
-    desc: "Get bot command pannel.",
+    desc: "Get prank command list.",
     category: "mainmenu",
     filename: __filename
 },
