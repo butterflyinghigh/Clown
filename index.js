@@ -17,7 +17,6 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-const prefix = '.'
 const { botwatermark } = require('./botwatermark')
 
 const ownerNumber = [config.OWNER_NUMBER]
@@ -43,6 +42,10 @@ async function connectToWA() {
 //===============Connect Mongodb==================
 const connectDB = require('./lib/mongodb')
 connectDB();
+//================================================
+const {readEnv} = require('./lib/database')
+const config = readEnv();
+const prefix = config.PREFIX
 //================================================
 console.log("🔄 Clown-MD Bot Connecting...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
