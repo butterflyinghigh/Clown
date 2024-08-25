@@ -44,7 +44,7 @@ const connectDB = require('./lib/mongodb')
 connectDB();
 //================================================
 const {readEnv} = require('./lib/database')
-const config = readEnv();
+const config = await readEnv();
 const prefix = config.PREFIX
 //================================================
 console.log("🔄 Clown-MD Bot Connecting...");
