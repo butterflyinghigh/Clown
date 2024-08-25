@@ -12,7 +12,8 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 const config = await readEnv();
   let menu = {
-    mainmenu: ''
+    mainmenu: '',
+    ai: ''
   };
 
 for (let i = 0; i < commands.length; i++) {
