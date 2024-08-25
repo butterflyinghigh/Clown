@@ -77,8 +77,4 @@ await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/2024
 console.log(e)
 reply(`${e}`)
 }
-})}catch(e){
-console.log(e)
-reply(`${e}`)
-}
 })
