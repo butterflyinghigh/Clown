@@ -125,7 +125,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         console.log(e)
         reply(`${e}`)
     }
-})})
+})
 
 //tiktok downloader
 cmd({
