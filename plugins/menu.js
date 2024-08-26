@@ -12,13 +12,151 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 const config = await readEnv();
   let menu = {
-    main: '',
-    download: '',
-    group: '',
-    owner: '',
-    convert: '',
-    search: '',
-    prank: '',
+    mainmenu: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─📋 Mᴀɪɴ Mᴇɴᴜ◦•◦❥•*
+*╎*${menu.mainmenu}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
+await conn.sendMessage(from,{audio: {url: `https://od.lk/d/NTdfOTMyMjg0OTVf/1724426628423rgwzdzcho-voicemaker.in-speech.mp3`},mimetype:"audio/mpeg",ptt:true},{quoted:mek})
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "downmenu",
+    desc: "Get download command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
+    download: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─📥 Dᴏᴡɴʟᴏᴀᴅ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
+*╎*${menu.download}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "ownermenu",
+    desc: "Get owner command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
+    owner: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─👤 Oᴡɴᴇʀ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
+*╎*${menu.owner}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "mainmenu",
+    desc: "Get main command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
+    main: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─🎯 Mᴀɪɴ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
+*╎*${menu.main}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "aimenu",
+    desc: "Get ai command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
     ai: ''
   };
 
@@ -28,49 +166,157 @@ menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*�
  }
 }
 
-let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗠𝗘𝗡𝗨 🤡 」*
-
-*╭─📥 Dᴏᴡɴʟᴏᴀᴅ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-*╎*${menu.download}
-*╰────────────────────◦•◦❥•*
-
-*╭─👤 Oᴡɴᴇʀ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-*╎*${menu.owner}
-*╎*
-*╰────────────────────◦•◦❥•*
-
-*╭─🎯 Mᴀɪɴ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-*╎*${menu.main}
-*╎*
-*╰────────────────────◦•◦❥•*
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗔𝗜 𝗠𝗘𝗡𝗨 🤡 」*
 
 *╭─🤖 Aɪ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
 *╎*${menu.ai}
-*╎*
-*╰────────────────────◦•◦❥•*
-
-*╭─🪀 Gʀᴏᴜᴘ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-*╎*${menu.group}
-*╎*
-*╰────────────────────◦•◦❥•*
-
-*╭─🔎 Sᴇᴀʀᴄʜ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-*╎*${menu.search}
-*╎*
-*╰────────────────────◦•◦❥•*
-
-*╭─💫 Cᴏɴᴠᴇʀᴛ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-*╎*${menu.convert}
-*╎*
-*╰────────────────────◦•◦❥•*
-
-*╭─👻 Pʀᴀɴᴋ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
-*╎*${menu.prank}
-*╎*
 *╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
 
 await m.react("📋")
-await conn.sendMessage(from,{audio: {url: `https://od.lk/d/NTdfOTMyMjg0OTVf/1724426628423rgwzdzcho-voicemaker.in-speech.mp3`},mimetype:"audio/mpeg",ptt:true},{quoted:mek})
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "groupmenu",
+    desc: "Get group command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
+    group: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗔𝗜 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─🪀 Gʀᴏᴜᴘ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
+*╎*${menu.group}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "searchmenu",
+    desc: "Get search command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
+    search: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗦𝗘𝗔𝗥𝗖𝗛 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─🔎 Sᴇᴀʀᴄʜ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
+*╎*${menu.search}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "convertmenu",
+    desc: "Get convert command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
+    convert: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗖𝗢𝗡𝗩𝗘𝗥𝗧 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─💫 Cᴏɴᴠᴇʀᴛ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
+*╎*${menu.convert}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
+await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
+
+//===================================================
+
+cmd({
+    pattern: "prankmenu",
+    desc: "Get prank command list.",
+    category: "mainmenu",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+const config = await readEnv();
+  let menu = {
+    prank: ''
+  };
+
+for (let i = 0; i < commands.length; i++) {
+if (commands[i].pattern && !commands[i].dontAddCommandList) {
+menu[commands[i].category] += ` *● ${config.PREFIX}${commands[i].pattern}*\n*╎*`;
+ }
+}
+
+let madeMenu = `*「 🤡 𝗖𝗟𝗢𝗪𝗡-𝗠𝗗 𝗣𝗥𝗔𝗡𝗞 𝗠𝗘𝗡𝗨 🤡 」*
+
+*╭─👻 Pʀᴀɴᴋ Cᴏᴍᴍᴀɴᴅꜱ──◦•◦❥•*
+*╎*${menu.prank}
+*╰────────────────────◦•◦❥•*\n\n\n${botwatermark}`
+
+await m.react("📋")
 await conn.sendMessage(from,{image: {url: `https://od.lk/d/NTdfOTMyMjc0ODhf/20240823_101032.jpg`},caption: madeMenu},{quoted:mek})
 
 }catch(e){
